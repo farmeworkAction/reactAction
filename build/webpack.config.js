@@ -41,6 +41,14 @@ module.exports ={
 			]
 	    },
 	    {
+	        test: /\.(js|jsx)$/,
+	        exclude: /node_modules/,
+	        use: [
+	          "babel-loader",
+	          "eslint-loader",
+	        ],
+	    },
+	    {
 		    test: /\.(png|jpg|jpeg|gif|svg)$/,
 		    use: {
 		      loader: 'url-loader',
@@ -101,5 +109,5 @@ module.exports ={
             }
         }
    },
-   devtool: 'eval-source-map'
+   devtool: 'eval-source-map',
 }
