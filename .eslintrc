@@ -22,11 +22,6 @@
         "react"
     ],
     "rules": {
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        //"semi": ["error", "always"],
         "no-empty": 0,
         "comma-dangle": 0,
         "no-unused-vars": 0,
