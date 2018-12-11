@@ -23,11 +23,6 @@ module.exports ={
 	// 配置loader
 	module: {
 		rules: [
-	// {
-	//      test: /\.css$/,
-	//      //use: [ 'style-loader', 'css-loader' ]
-	//      loader: 'style-loader!css-loader'
-	// },
 		{
 			test: /\.css$/,
 				use: ExtractTextPlugin.extract({
@@ -35,10 +30,10 @@ module.exports ={
 					use: ["css-loader", 'postcss-loader']
 				})
 		},
-		{
-			test: /.jsx$/, //使用loader的目标文件。这里是.jsx
-			loader: 'babel-loader'
-		},
+		// {
+		// 	test: /.jsx$/, //使用loader的目标文件。这里是.jsx
+		// 	loader: 'babel-loader'
+		// },
 		{
 			test: /.(js)$/, //使用loader的目标文件。这里是.js
 			//loader: 'babel-loader',
@@ -60,7 +55,7 @@ module.exports ={
 			use: {
 				loader: 'url-loader',
 				options: {
-					name: 'images/[name].[hash].[ext]' ,
+					name: 'images/[name].[hash].[ext]',
 					limit: 5 * 1024
 				}
 			}

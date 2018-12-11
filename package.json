@@ -17,7 +17,7 @@
     "chalk": "^2.4.1",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-react": "^7.11.1",
     "install": "^0.11.0",
     "npm": "^6.1.0",
     "react": "^16.4.0",
@@ -43,6 +43,8 @@
     "file-loader": "^1.1.11",
     "happypack": "^5.0.0",
     "html-webpack-plugin": "^4.0.0-beta.4",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "postcss-loader": "^2.1.5",
     "progress-bar-webpack-plugin": "^1.11.0",
     "purify-css": "^1.2.5",
@@ -53,5 +55,16 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.4",
     "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

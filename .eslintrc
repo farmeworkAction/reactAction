@@ -5,7 +5,10 @@
         "node": true,
         "commonjs": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -18,9 +21,6 @@
         "sourceType": "module"
     },
     "parser": "babel-eslint",
-    "plugins": [
-        "react"
-    ],
     "rules": {
         "no-empty": 0,
         "comma-dangle": 0,
