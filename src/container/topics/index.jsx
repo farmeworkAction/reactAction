@@ -4,7 +4,7 @@ import {
     Link
   } from 'react-router-dom';
 
-import Topic from './Topic.jsx';
+import Topic from './Topic';
 
 const Topics = ({ match }) => (
     <div>

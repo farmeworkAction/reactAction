@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import {Button} from './styled'
 
 class About extends React.Component {
-    
+
     render(){
         return(
             <div>
@@ -19,11 +19,11 @@ class About extends React.Component {
 const mapState = state => ({
     data: state.data
 })
-  
+
 const mapDispatch = ({ data: { increment, incrementAsync }}) => ({
     increment: () => increment(2),
     incrementAsync: () => incrementAsync(2)
 })
-  
+
 
 export default connect(mapState, mapDispatch)(About);
