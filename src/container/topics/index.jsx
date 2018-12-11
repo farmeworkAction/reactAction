@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Route,
     Link
   } from 'react-router-dom';
+
+import Topic from './Topic.jsx';
 
 const Topics = ({ match }) => (
     <div>
@@ -25,17 +26,14 @@ const Topics = ({ match }) => (
           </Link>
         </li>
       </ul>
-  
-      <Route path={`${match.url}/:topicId`} component={Topic}/>
-      <Route exact path={match.url} render={() => (
-        <h3>Please select a topic.</h3>
-      )}/>
-    </div>
-  )
 
-  const Topic = ({ match }) => (
-    <div>
-      <h3>{match.params.topicId}</h3>
+      <Route path={`${match.url}/:topicId`} component={Topic}/>
+      <Route exact
+          path={match.url}
+          render={() => (
+            <h3>Please select a topic.</h3>
+          )}
+      />
     </div>
   )
 

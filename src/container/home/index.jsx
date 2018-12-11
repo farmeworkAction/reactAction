@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import {Button} from './styled'
 
 class Home extends React.Component {
-    
     render(){
         return(
             <div>
@@ -20,7 +19,7 @@ class Home extends React.Component {
 const mapState = state => ({
     count: state.count
 })
-  
+
 const mapDispatch = ({ count: { increment, incrementAsync }}) => ({
     increment: () => increment(1),
     incrementAsync: () => incrementAsync(1)
@@ -29,7 +28,7 @@ const mapDispatch = ({ count: { increment, incrementAsync }}) => ({
 Home.propTypes = {
     count: PropTypes.number,
     increment: PropTypes.func,
-    // incrementAsync: PropTypes.func,
+    incrementAsync: PropTypes.func
   };
 
 export default connect(mapState, mapDispatch)(Home);

@@ -26,8 +26,8 @@ module.exports ={
 		{
 			test: /\.css$/,
 				use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-					use: ["css-loader", 'postcss-loader']
+					fallback: 'style-loader',
+					use: ['css-loader', 'postcss-loader']
 				})
 		},
 		// {
@@ -45,10 +45,11 @@ module.exports ={
 		{
 			test: /\.(js|jsx)$/,
 			exclude: /node_modules/,
+			include: /src/,
 			use: [
-				"babel-loader",
-				"eslint-loader",
-			],
+				'babel-loader',
+				'eslint-loader'
+			]
 		},
 		{
 			test: /\.(png|jpg|jpeg|gif|svg)$/,
@@ -60,17 +61,17 @@ module.exports ={
 				}
 			}
 		},
-		{ 
+		{
 			test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
 			use: [
-				{ 
+				{
 					loader: 'url-loader',
 					options: {
 						limit: 8192,
-						name: 'images/[name].[hash].[ext]' 
-					} 
-				} 
-			] 
+						name: 'images/[name].[hash].[ext]'
+					}
+				}
+			]
 		}
 	]
 	},
@@ -88,7 +89,7 @@ module.exports ={
 		}),
 		new PurifyCSSPlugin({
 			// Give paths to parse for rules. These should be absolute!
-			paths: glob.sync(path.join(__dirname, '*.html')),
+			paths: glob.sync(path.join(__dirname, '*.html'))
 		}),
 		new WebpackParallelUglifyPlugin({
 			uglifyJS: {
@@ -116,23 +117,23 @@ module.exports ={
 		overlay: {
 			warnings: true,
 			errors: true
-		},
+		}
 		//port
 	},
 	optimization: {
         runtimeChunk: {
-            name: "manifest"
+            name: 'manifest'
         },
         splitChunks: {
             cacheGroups: {
                 vendor: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: "vendors",
+                    name: 'vendors',
                     priority: -20,
-                    chunks: "all"
+                    chunks: 'all'
                 }
             }
         }
    },
-   devtool: 'eval-source-map',
+   devtool: 'eval-source-map'
 }

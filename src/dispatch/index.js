@@ -2,7 +2,7 @@ import { init } from '@rematch/core'
 import * as models from '../models'
 
 const store = init({
-  models,
+  models
 })
 
 export const { dispatch } = store
@@ -21,4 +21,4 @@ dispatch.data.increment(2)                       // state = { data: 2 }
 
 // effects
 dispatch({ type: 'data/incrementAsync', payload: 2 }) // state = { data: 3 } after delay
-dispatch.data.incrementAsync(2)    
+dispatch.data.incrementAsync(2)
