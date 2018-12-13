@@ -4,6 +4,7 @@
   "description": "react-webpack4-cli",
   "main": "index.js",
   "scripts": {
+    "commit": "git cz",
     "dev": "webpack-dev-server --mode development --progress --hot --hotOnly --config build/webpack.config.js",
     "build": "webpack --mode production --progress --config build/webpack.config.js"
   },
@@ -39,6 +40,7 @@
     "babel-loader": "^7.1.5",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "cz-conventional-changelog": "^2.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "happypack": "^5.0.0",
@@ -66,5 +68,10 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
