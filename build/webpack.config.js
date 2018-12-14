@@ -75,6 +75,9 @@ module.exports ={
 		}
 	]
 	},
+	resolve:{
+		extensions:['.js','.jsx','.json']
+	},
 	// 配置插件
 	plugins: [
 		new HTMLPlugin(

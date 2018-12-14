@@ -5,6 +5,11 @@ import { connect } from 'react-redux'
 import {Button} from './styled'
 
 class Home extends React.Component {
+    static propTypes={
+        count: PropTypes.number,
+        increment: PropTypes.func,
+        incrementAsync: PropTypes.func
+    }
     render(){
         return(
             <div>
@@ -24,11 +29,5 @@ const mapDispatch = ({ count: { increment, incrementAsync }}) => ({
     increment: () => increment(1),
     incrementAsync: () => incrementAsync(1)
 })
-
-Home.propTypes = {
-    count: PropTypes.number,
-    increment: PropTypes.func,
-    incrementAsync: PropTypes.func
-  };
 
 export default connect(mapState, mapDispatch)(Home);
