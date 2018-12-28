@@ -1,10 +1,14 @@
 import React from 'react';
 
+import WithLogin from '../withLogin';
+
+@WithLogin
 class Nav extends React.Component {
   render () {
     return (
       <div>
-        Nav
+        Nav list
+      {this.props.name}
       </div>
     );
   }

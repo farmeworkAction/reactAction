@@ -8,6 +8,10 @@
     "dev": "webpack-dev-server --mode development --progress --hot --hotOnly --config build/webpack.config.js",
     "build": "webpack --mode production --progress --config build/webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farmeworkAction/reactAction.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -64,7 +68,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.js|.jsx": [
       "eslint --fix",
       "git add"
     ]
