@@ -120,8 +120,8 @@ module.exports ={
 		overlay: {
 			warnings: true,
 			errors: true
-		}
-		//port
+		},
+		port: 9000
 	},
 	optimization: {
         runtimeChunk: {
