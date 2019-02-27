@@ -9,11 +9,11 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: Home
+        component: Home,
       },
       {
         path: '/about',
-        component: About
+        component: About,
       },
       {
         path: '/topics',
@@ -21,24 +21,14 @@ const routes = [
         routes:[
           {
             path: '/topics/detail/:id',
-            component: Topic
-          }
-        ]
+            component: Topic,
+          },
+        ],
       },
       {
         path: '/form',
-        component: Form
-      }
-      // {
-      //   path: "/child/:id",
-      //   component: Child,
-      //   routes: [
-      //     {
-      //       path: "/child/:id/grand-child",
-      //       component: GrandChild
-      //     }
-      //   ]
-      // }
+        component: Form,
+      },
     ];
 
 export default routes

@@ -13,10 +13,10 @@ class Form extends React.Component {
 
   render () {
     return (
-      <form>
-        <input onChange={this._onNameChanged} />
-        <input onChange={this._onPasswordChanged} />
-      </form>
+        <form>
+            <input onChange={this._onNameChanged} />
+            <input onChange={this._onPasswordChanged} />
+        </form>
     );
   }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  HashRouter as Router
+  HashRouter as Router,
 } from 'react-router-dom'
 
 import { renderRoutes } from 'react-router-config'
@@ -15,12 +15,12 @@ export default class App extends React.Component {
 
 	render () {
     return (
-      <Router>
-          <div>
-              <Header />
-              {renderRoutes(routes)}
-          </div>
-      </Router>
+        <Router>
+            <div>
+                <Header />
+                {renderRoutes(routes)}
+            </div>
+        </Router>
 		)
 	}
 }

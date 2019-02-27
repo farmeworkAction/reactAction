@@ -5,18 +5,18 @@ const WithLogin = (WithLoginComponent) => {
     constructor(props){
       super(props);
       this.state={
-        name: 'lee'
+        name: 'lee',
       }
     }
     componentDidMount(){
       this.setState({
-        name: 'jersey'
+        name: 'jersey',
       })
     }
     render(){
       const { name } = this.state;
       return(
-        <WithLoginComponent {...this.props} name={name} />
+          <WithLoginComponent {...this.props} name={name} />
       )
     }
   }

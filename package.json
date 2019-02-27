@@ -21,17 +21,23 @@
     "babel-eslint": "^8.2.3",
     "chalk": "^2.4.1",
     "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.11.1",
+    "glob": "^7.1.3",
     "install": "^0.11.0",
     "npm": "^6.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
-    "styled-components": "^4.1.2"
+    "styled-components": "^4.1.2",
+    "webpack": "^4.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
@@ -58,9 +64,8 @@
     "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
-    "webpack": "^4.9.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.2.1",
     "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "husky": {

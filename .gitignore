@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+production
 npm-debug.log
 package-lock.json
 # 忽略使用WebStorm开发时，生成的缓存文件夹
@@ -9,3 +10,4 @@ package-lock.json
 tree.md
 *.idea
 dist
+

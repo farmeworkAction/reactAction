@@ -4,7 +4,7 @@ export const count = {
       // handle state changes with pure functions
       increment(state, payload) {
         return state + payload
-      }
+      },
     },
     effects: (dispatch) => ({
       // handle state changes with impure functions.
@@ -13,8 +13,8 @@ export const count = {
         console.log(rootState);
         await new Promise(resolve => setTimeout(resolve, 1000))
         dispatch.count.increment(payload)
-      }
-    })
+      },
+    }),
   }
 
   export const data = {
@@ -22,13 +22,13 @@ export const count = {
     reducers: {
       increment(state, payload) {
         return state + payload
-      }
+      },
     },
     effects: (dispatch) => ({
       async incrementAsync(payload, rootState) {
         console.log(rootState);
         await new Promise(resolve => setTimeout(resolve, 1000))
         dispatch.data.increment(payload)
-      }
-    })
+      },
+    }),
   }

@@ -86,6 +86,7 @@
         "no-mixed-spaces-and-tabs": 0,
         "prefer-arrow-callback": 0,
         "arrow-parens": 0,
-        "arrow-spacing": 0
+        "arrow-spacing": 0,
+        "react/jsx-filename-extension": 0
     }
 }

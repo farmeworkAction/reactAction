@@ -17,12 +17,12 @@ class About extends React.Component {
 }
 
 const mapState = state => ({
-    data: state.data
+    data: state.data,
 })
 
 const mapDispatch = ({ data: { increment, incrementAsync }}) => ({
     increment: () => increment(2),
-    incrementAsync: () => incrementAsync(2)
+    incrementAsync: () => incrementAsync(2),
 })
 
 
