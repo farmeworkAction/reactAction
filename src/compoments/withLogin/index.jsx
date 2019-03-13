@@ -16,7 +16,9 @@ const WithLogin = (WithLoginComponent) => {
     render(){
       const { name } = this.state;
       return(
-          <WithLoginComponent {...this.props} name={name} />
+          <div>
+              <WithLoginComponent {...this.props} name={name} />
+          </div>
       )
     }
   }

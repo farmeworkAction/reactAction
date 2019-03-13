@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@rematch/core": "^1.0.6",
+    "antd": "^3.13.6",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
     "chalk": "^2.4.1",
@@ -49,6 +50,7 @@
     "@babel/runtime": "^7.2.0",
     "babel-core": "^7.0.0-0",
     "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.11.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "cz-conventional-changelog": "^2.1.0",

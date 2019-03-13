@@ -1,7 +1,7 @@
 const path = require('path') // 引入‘path’，为了在这里使用绝对路径，避免相对路径在不同系统时出现不必要的问题
 const glob = require('glob')
 const chalk = require('chalk')
-const webpack = require('webpack')
+//const webpack = require('webpack')
 const HTMLPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const PurifyCSSPlugin = require('purifycss-webpack')
@@ -30,7 +30,7 @@ module.exports ={
 					fallback: 'style-loader',
 					use: ['css-loader', 'postcss-loader'],
 				}),
-		},
+    },
 		{
 			test: /.(js)$/,
 			use: 'happypack/loader',
@@ -79,13 +79,13 @@ module.exports ={
 				title:'react app',
 				filename: 'index.html',
 				template: 'index.html',
+        environment: process.env.NODE_ENV,
 		}),
-		new CleanWebpackPlugin([path.join(__dirname, 'dist')]),
+		new CleanWebpackPlugin([path.join(__dirname, 'productions')]),
 		new ExtractTextPlugin({
 			filename: 'css/[name].[hash].css', //放到dist/css/下
 		}),
 		new PurifyCSSPlugin({
-			// Give paths to parse for rules. These should be absolute!
 			paths: glob.sync(path.join(__dirname, '*.html')),
 		}),
 		new WebpackParallelUglifyPlugin({
@@ -108,11 +108,11 @@ module.exports ={
 		new ProgressBarPlugin({
 			format: '  build [:bar] ' + chalk.cyan.bold(':percent') + ' (:elapsed seconds)', clear: false,
 		}),
-		new webpack.DllReferencePlugin({
-      context: __dirname,
-      // manifest就是我们第一步中打包出来的json文件
-      manifest: require('../dist/vendor-manifest.json'),
-    }),
+		// new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   // manifest就是我们第一步中打包出来的json文件
+    //   manifest: require('../dist/vendor-manifest.json'),
+    // }),
 	],
 	devServer: {
 		open: true,
@@ -122,20 +122,20 @@ module.exports ={
 		},
 		port: 9999,
 	},
-	// optimization: {
-  //       runtimeChunk: {
-  //           name: 'manifest',
-  //       },
-  //       splitChunks: {
-  //           cacheGroups: {
-  //               vendor: {
-  //                   test: /[\\/]node_modules[\\/]/,
-  //                   name: 'vendors',
-  //                   priority: -20,
-  //                   chunks: 'all',
-  //               },
-  //           },
-  //       },
-  //  },
+	optimization: {
+        runtimeChunk: {
+            name: 'manifest',
+        },
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    priority: -20,
+                    chunks: 'all',
+                },
+            },
+        },
+   },
    devtool: 'eval-source-map',
 }

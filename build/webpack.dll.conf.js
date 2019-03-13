@@ -4,6 +4,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: {
     vendor: [
+      'antd',
       'prop-types',
       'react',
       'react-dom',
